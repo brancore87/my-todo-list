@@ -1,0 +1,121 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Madimi+One&display=swap');
+
+$primary: #333;
+$light: #efefef;
+$purple: #880cee;
+$red: #f44034;
+
+body {
+  font-family: "Inter",
+    sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  display: grid;
+  place-items: center;
+  background-color: $light;
+  min-height: 100vh;
+  min-width: 100vw;
+  color: $purple;
+}
+
+.container {
+  background-color: white;
+  max-width: 800px;
+  padding: 2rem;
+  box-shadow: 1px 2px 5px rgba($color: $primary, $alpha: 1);
+  border-radius: 8px;
+}
+
+h1 {
+  color: $purple;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 3rem;
+  border: 3px solid $purple;
+  padding: .5rem;
+  border-radius: 8px;
+}
+
+#todoInput {
+  font-size: inherit;
+  font-family: inherit;
+  margin: 0 .5rem;
+
+  &::placeholder {
+    opacity: .4;
+    transition: opacity .1s ease-out;
+  }
+
+
+  &:focus {
+    outline: none;
+
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+}
+
+#task-submit,
+#task-delete {
+  background-repeat: no-repeat;
+  background-position: center;
+  // background: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: .8rem;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+#task-submit {
+  font-size: 1rem;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 2px 3px rgba($purple, .5);
+  }
+}
+
+#task-delete {
+
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 2px 3px rgba($red, .5);
+  }
+}
+
+.taskList {
+  margin-top: 2rem;
+}
+
+.task {
+  display: grid;
+  grid-template-columns: 1fr 3rem;
+  padding: .5rem;
+  margin-top: 1rem 0;
+  border-bottom: 3px solid $light;
+  border-top: 3px solid $light;
+}
+
+.task-txt {
+  padding: .5rem 1rem .5rem .5rem;
+}
