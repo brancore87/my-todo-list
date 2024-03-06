@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="main.css" />
+    <title>My Todo List</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>My Todo List</h1>
+      <form>
+        <input
+          type="text"
+          name="todoInput"
+          id="todoInput"
+          placeholder="Enter a new task ..."
+        />
+        <button type="submit" for="todoInput" id="task-submit">➕</button>
+      </form>
+      <ul id="taskList"></ul>
+    </div>
+
+    <template id="task-template">
+      <li class="task">
+        <p class="task-txt"></p>
+        <button id="task-delete">❌</button>
+      </li>
+    </template>
+  </body>
+</html>

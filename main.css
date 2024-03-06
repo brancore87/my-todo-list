@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Madimi+One&display=swap");
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  display: grid;
+  place-items: center;
+  background-color: #efefef;
+  min-height: 100vh;
+  min-width: 100vw;
+  color: #880cee;
+}
+
+.container {
+  background-color: white;
+  max-width: 800px;
+  padding: 2rem;
+  box-shadow: 1px 2px 5px #333333;
+  border-radius: 8px;
+}
+
+h1 {
+  color: #880cee;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 3rem;
+  border: 3px solid #880cee;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+#todoInput {
+  font-size: inherit;
+  font-family: inherit;
+  margin: 0 0.5rem;
+}
+#todoInput::-moz-placeholder {
+  opacity: 0.4;
+  -moz-transition: opacity 0.1s ease-out;
+  transition: opacity 0.1s ease-out;
+}
+#todoInput::placeholder {
+  opacity: 0.4;
+  transition: opacity 0.1s ease-out;
+}
+#todoInput:focus {
+  outline: none;
+}
+#todoInput:focus::-moz-placeholder {
+  opacity: 1;
+}
+#todoInput:focus::placeholder {
+  opacity: 1;
+}
+
+#task-submit,
+#task-delete {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+}
+#task-submit:focus,
+#task-delete:focus {
+  outline: none;
+}
+
+#task-submit {
+  font-size: 1rem;
+}
+#task-submit:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 2px 3px rgba(136, 12, 238, 0.5);
+}
+
+#task-delete:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 2px 3px rgba(244, 64, 52, 0.5);
+}
+
+.taskList {
+  margin-top: 2rem;
+}
+
+.task {
+  display: grid;
+  grid-template-columns: 1fr 3rem;
+  padding: 0.5rem;
+  margin-top: 1rem 0;
+  border-bottom: 3px solid #efefef;
+  border-top: 3px solid #efefef;
+}
+
+.task-txt {
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+}/*# sourceMappingURL=main.css.map */
